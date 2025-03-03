@@ -15,12 +15,12 @@ exports.bankName = onRequest(
     { region: "asia-south1", cors: [/bharatnxt\.in$/] },
     async (req, res) => {
         try {
-            const bearerToken = req.headers.authorization;
-            if (bearerToken !== process.env.BEARER_TOKEN) {
-                return res
-                    .status(401)
-                    .json({ success: false, message: "Unauthorized" });
-            }
+            // const bearerToken = req.headers.authorization;
+            // if (bearerToken !== process.env.BEARER_TOKEN) {
+            //     return res
+            //         .status(401)
+            //         .json({ success: false, message: "Unauthorized" });
+            // }
 
             const { vendors } = req.body;
             if (!Array.isArray(vendors) || vendors.length === 0) {
